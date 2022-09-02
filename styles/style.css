@@ -1,0 +1,167 @@
+html {
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(27deg, 66%, 92%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px 20px 20px;
+}
+main .balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: 10px;
+  padding: 20px;
+  width: 345px;
+}
+main .balance h1 {
+  color: hsl(33deg, 100%, 98%);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .balance h1 span {
+  font-size: 28px;
+  font-weight: 700;
+}
+main .balance img {
+  height: 40px;
+}
+main .statistics {
+  background-color: hsl(33deg, 100%, 98%);
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+main .statistics h2 {
+  color: hsl(25deg, 47%, 15%);
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 50px;
+}
+main .statistics .bars-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid hsl(27deg, 66%, 92%);
+  padding-bottom: 20px;
+}
+main .statistics .bars-container .bar {
+  width: 33.5px;
+  height: 170px;
+  margin-right: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+main .statistics .bars-container .bar .day-bar {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  height: 0;
+  border-radius: 3px;
+  background-color: hsl(10deg, 79%, 65%);
+  transition: 1s ease;
+  cursor: pointer;
+}
+main .statistics .bars-container .bar .day-bar:hover {
+  background-color: hsl(10deg, 79%, 75%);
+}
+main .statistics .bars-container .bar .cyan {
+  background-color: hsl(186deg, 34%, 60%);
+}
+main .statistics .bars-container .bar .cyan:hover {
+  background-color: hsl(186deg, 34%, 75%);
+}
+main .statistics .bars-container .bar .amount {
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  letter-spacing: 1px;
+  left: -7px;
+  top: -35px;
+  padding: 4px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: hsl(25deg, 47%, 15%);
+  color: hsl(33deg, 100%, 98%);
+}
+main .statistics .bars-container .bar p {
+  position: absolute;
+  bottom: 0;
+  margin-top: 10px;
+  font-size: 14px;
+  color: hsl(28deg, 10%, 53%);
+}
+main .statistics .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+main .statistics .total h1 {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .statistics .total h1 span {
+  font-size: 28px;
+  font-weight: 700;
+  color: hsl(25deg, 47%, 15%);
+}
+main .statistics .total p {
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+  text-align: right;
+}
+main .statistics .total p span {
+  color: hsl(28deg, 10%, 53%);
+}
+
+footer {
+  margin-top: 90px;
+  text-align: center;
+  color: hsl(28deg, 10%, 53%);
+}
+footer a {
+  text-decoration: none;
+  color: hsl(10deg, 79%, 65%);
+  font-weight: 700;
+}
+
+@media (min-width: 670px) {
+  main .balance {
+    width: 450px;
+  }
+  main .statistics {
+    width: 450px;
+  }
+  main .statistics .bars-container .bar {
+    width: 100%;
+    margin-right: 0;
+  }
+  main .statistics .bars-container .bar .amount {
+    font-size: 14px;
+    left: -9px;
+    top: -40px;
+    height: 25px;
+  }
+  main .statistics .bars-container .bar .day-bar {
+    width: 45px;
+  }
+}/*# sourceMappingURL=style.css.map */

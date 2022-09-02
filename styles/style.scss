@@ -1,0 +1,187 @@
+html{
+    font-size: 100%;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$Softred: hsl(10, 79%, 65%);
+$Cyan: hsl(186, 34%, 60%);
+$Darkbrown: hsl(25, 47%, 15%);
+$Mediumbrown: hsl(28, 10%, 53%);
+$Cream: hsl(27, 66%, 92%);
+$Verypaleorange: hsl(33, 100%, 98%);
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    background-color: $Cream;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px 20px 20px;
+
+    .balance{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $Softred;
+        border-radius: 10px;
+        padding: 20px;
+        width: 345px;
+        
+        h1{
+            color: $Verypaleorange;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 30px;
+            span{
+                font-size: 28px;
+                font-weight: 700;
+            }
+        }
+
+        img{
+            height: 40px;
+        }
+    }
+    .statistics{
+        background-color: $Verypaleorange;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 20px;
+
+        h2{
+            color: $Darkbrown;
+            text-align: left;
+            padding-bottom: 0;
+            margin-bottom: 50px;
+        }
+
+        .bars-container{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 3px solid $Cream;
+            padding-bottom: 20px;
+           
+            .bar{
+                width: 33.5px;
+                height: 170px;
+                margin-right: 10px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+
+                .day-bar{
+                    position: absolute;
+                    bottom: 30px;
+                    width: 100%;
+                    height: 0;
+                    border-radius: 3px;
+                    background-color: $Softred;
+                    transition:   1s ease;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: hsl(10, 79%, 75%);
+                    }
+                }
+                .cyan{
+                    background-color: $Cyan;
+                    &:hover{
+                        background-color: hsl(186, 34%, 75%);
+                    }
+                }
+
+                .amount{
+                    font-size: 10px;
+                    font-weight: 700;
+                    position: absolute;
+                    letter-spacing: 1px;
+                    left: -7px;
+                    top: -35px;
+                    padding: 4px;
+                    height: 20px;
+                    border-radius: 3px;
+                    background-color: $Darkbrown;
+                    color: $Verypaleorange;
+                }
+
+                p{
+                    position: absolute;
+                    bottom: 0;
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: $Mediumbrown;
+                }
+            }
+        }
+        .total{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 15px;
+
+            h1{
+                color: $Mediumbrown;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 30px;
+                span{
+                font-size: 28px;
+                font-weight: 700;
+                color: $Darkbrown;
+                }
+            }
+            p{
+                color: $Darkbrown;
+                font-weight: 700;
+                text-align: right;
+                span{
+                    color: $Mediumbrown;
+                }
+            }
+        }
+    }
+}
+footer{
+    margin-top: 90px;
+    text-align: center;
+    color: $Mediumbrown;
+    a{
+        text-decoration: none;
+        color: $Softred;
+        font-weight: 700;
+    }
+}
+@media (min-width:670px){
+   main{
+    .balance{
+        width: 450px;
+    }
+    .statistics{
+        width: 450px;
+
+        .bars-container{
+            .bar{
+                width: 100%;
+                margin-right: 0;
+                .amount{
+                    font-size: 14px;
+                    left: -9px;
+                    top: -40px;
+                    height: 25px;
+                }
+                .day-bar{
+                    width: 45px;
+                }
+            }
+        }
+       
+    }
+   }
+}
