@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repository](https://github.com/KairuChris/expenses-chart-component)
-- Live Site URL: [Add live site URL here](https://kairuchris.github.io/expenses-chart-component/)
+- Live Site URL: [Github Pages](https://kairuchris.github.io/expenses-chart-component/)
 
 ## My process
 
